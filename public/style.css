@@ -1,0 +1,126 @@
+html {
+  background: url('https://media4.giphy.com/media/5jULgyuDJRnzcQw9uT/source.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.mainContainer {
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 100vw;
+  width: 90%;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.famModalHeader {
+  padding: 15px;
+  text-align: center;
+  color: #63F2E4;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.flex-container-family {
+  display: block;
+  overflow: auto;
+  height: 50%;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  border: solid #63F2E4;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.addFamily-form {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.addFamily-post {
+  resize: none;
+  width: 50vh;
+  height: 40vh;
+  border: solid #63F2E4;
+  border-radius: 15px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Montserrat, sans-serif';
+  font-style: normal;
+  font-weight: 400;;
+  outline: none;
+  position: relative;
+  margin-left: 10%
+}
+
+.date-box {
+  max-width: 150px;
+  border-radius: 4px;
+  font-family: 'Montserrat, sans-serif';
+  font-style: normal;
+  font-weight: bold;
+  border: solid #63F2E4;
+}
+
+.name-box {
+  border-radius: 4px;
+  font-family: 'Montserrat, sans-serif';
+  font-style: normal;
+  font-weight: bold;
+  border: solid #63F2E4;
+}
+
+/* Properties for each button and attempt at centering those buttons*/
+.mainButtonContainer {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin-left: 45%;
+  width: 100vh;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.button {
+  cursor: pointer !important;
+  display: inline-block !important;
+  margin: 10px;
+  position: relative !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  width: auto !important;
+  touch-action: manipulation !important;
+  font-family: 'Montserrat, sans-serif' !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  border-radius: 10px !important;
+  padding: 10px 20px !important;
+  border: solid rgb(146, 0, 127) !important;
+  background: #63f2e4;
+  color: rgb(146, 0, 127);
+  transition: .3s;
+}
+
+.button:hover {
+  background:rgb(146, 0, 127);
+  color: #63f2e4;
+}
+.button:focus {
+  outline: none;
+}
