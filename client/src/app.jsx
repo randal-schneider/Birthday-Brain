@@ -2,7 +2,8 @@ import React from 'react';
 import FamilyModal from './components/modals/familyModal.jsx';
 import FriendsModal from './components/modals/friendsModal.jsx';
 import CoworkersModal from './components/modals/coworkersModal.jsx';
-import AddFamily from './components/addModals/addFamily';
+import AddFamily from './components/addModals/addFamily.jsx';
+import AddCoWorker from './components/addModals/addCoWorker.jsx';
 
 const axios = require('axios');
 
@@ -60,6 +61,13 @@ class App extends React.Component {
     });
   }
 
+  postCoWorker(worker) {
+    axios.post('/coworker', worker)
+    .then(() => {
+      this.getCoworkers();
+    });
+  }
+
 
   render() {
     const { family } = this.state;
@@ -90,7 +98,7 @@ class App extends React.Component {
               <FriendsModal friends={friends}/>
             </div>
             <div>
-              <CoworkersModal coworkers={coworkers}/>
+              <AddCoWorker newCoWorker={this.postCoWorker.bind(this)}/>
             </div>
           </div>
         </div>
