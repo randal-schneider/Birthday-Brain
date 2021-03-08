@@ -34,7 +34,7 @@ const date = someDate.toISOString().substr(0, 10);
 const givenDate = someDate.toISOString().substr(0,10);
 const receiveDate = someDate.toISOString().substr(0,10);
 
-export default function AddFamily(props) {
+export default function AddCoWorker(props) {
   const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
@@ -42,7 +42,7 @@ export default function AddFamily(props) {
   const [bdayDate, setBday] = React.useState(date);
   const [givDate, setGivDate] = React.useState('');
   const [recDate, setRecDate] = React.useState('');
-  const [relation, setRelation] = React.useState('');
+  const [gend, setGender] = React.useState('');
   const [giftGive, setGiftGive] = React.useState('none');
   const [giftReceived, setGiftReceived] = React.useState('none');
   const [addComment, setComment] = React.useState('');
@@ -64,8 +64,8 @@ export default function AddFamily(props) {
     setRecDate(event.target.value);
   }
 
-  const handleRelation = (event) => {
-    setRelation(event.target.value);
+  const handleGender = (event) => {
+    setGender(event.target.value);
   }
 
   const handleGiftGiven = (event) => {
@@ -89,14 +89,14 @@ export default function AddFamily(props) {
   };
 
 
-  const handleAddFamily = (event) => {
+  const handleAddCoWorker = (event) => {
     event.preventDefault();
-    props.newFamily({
+    props.newCoWorker({
       name: member,
       bday: bdayDate,
       dateGiv: givDate,
       dateRec: recDate,
-      famType: relation,
+      gender: gend,
       giftGiv: giftGive,
       giftRec: giftReceived,
       comment: addComment,
@@ -107,7 +107,7 @@ export default function AddFamily(props) {
     setBday(date);
     setGivDate('');
     setRecDate('');
-    setRelation('');
+    setGender('');
     setGiftGive('none');
     setGiftReceived('none');
     setComment('');
@@ -116,15 +116,15 @@ export default function AddFamily(props) {
   const body = (
     <div style={modalStyle} className={classes.paper}>
       <div>
-        <form className="addFamily-form" onSubmit={handleAddFamily}>
+        <form className="addFamily-form" onSubmit={handleAddCoWorker}>
           <label>
             Name:{' '}{' '}
             <input className="name-box" type="text" value={member} onChange={handleName} required />
           </label>
           <br />
           <label>
-            Relation:{' '}{' '}
-            <input className="name-box" type="text" value={relation} onChange={handleRelation} required />{' '}{' '}
+            Gender:{' '}{' '}
+            <input className="name-box" type="text" value={gend} onChange={handleGender} required />{' '}{' '}
           </label>
           <br />
           <label>
@@ -160,7 +160,7 @@ export default function AddFamily(props) {
   return (
     <div>
       <button className="button" type="button" onClick={handleOpen}>
-        Add Family
+        Add Co-Worker
       </button>
       <Modal
         open={open}
