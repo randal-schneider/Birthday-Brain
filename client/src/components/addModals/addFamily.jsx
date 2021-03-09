@@ -134,13 +134,19 @@ export default function AddFamily(props) {
           <br />
           <label>
             Date Given:{' '}{' '}
-            <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={givenDate} onChange={handleGivDate}/>{' '}{' '}
+            <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={givenDate} onChange={handleGivDate}/>
+          </label>
+          <br />
+          <label>
             Link for Gift Given:{' '}{' '}<input className="name-box" type="text" value={giftGive} onChange={handleGiftGiven}/>
           </label>
           <br />
           <label>
             Date Received:{' '}{' '}
             <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={receiveDate} onChange={handleRecDate}/>{' '}{' '}
+          </label>
+          <br />
+          <label>
             Link for Gift I Received:{' '}{' '}<input className="name-box" type="text" value={giftReceived} onChange={handleGiftReceived}/>
           </label>
           <br />
