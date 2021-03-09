@@ -17,8 +17,8 @@ function getModalStyle() {
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
-    height: "75vh",
-    width: "65vh",
+    height: "60vh",
+    width: "50vh",
     backgroundColor: "rgb(238, 147, 247)",
     border: '2px solid #63F2E4',
     boxShadow: theme.shadows[5],
@@ -117,41 +117,47 @@ export default function AddCoWorker(props) {
     <div style={modalStyle} className={classes.paper}>
       <div>
         <form className="addFamily-form" onSubmit={handleAddCoWorker}>
-          <label>
+          <label className="thick">
             Name:{' '}{' '}
             <input className="name-box" type="text" value={member} onChange={handleName} required />
           </label>
           <br />
-          <label>
+          <label className="thick">
             Gender:{' '}{' '}
             <input className="name-box" type="text" value={gend} onChange={handleGender} required />{' '}{' '}
           </label>
           <br />
-          <label>
+          <label className="thick">
             Birthday:{' '}{' '}
-          <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={date} onChange={handleBday}/>
+          <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={date} onChange={handleBday} required/>
           </label>
           <br />
-          <label>
+          <label className="thick">
             Date Given:{' '}{' '}
-            <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={givenDate} onChange={handleGivDate}/>{' '}{' '}
+            <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={givenDate} onChange={handleGivDate}/>
+          </label>
+          <br />
+          <label className="thick">
             Link for Gift Given:{' '}{' '}<input className="name-box" type="text" value={giftGive} onChange={handleGiftGiven}/>
           </label>
           <br />
-          <label>
+          <label className="thick">
             Date Received:{' '}{' '}
             <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={receiveDate} onChange={handleRecDate}/>{' '}{' '}
+          </label>
+          <br />
+          <label className="thick">
             Link for Gift I Received:{' '}{' '}<input className="name-box" type="text" value={giftReceived} onChange={handleGiftReceived}/>
           </label>
           <br />
-          <label>
+          <label className="thick">
             Comment:{' '}{' '}
             <br />
             <br />
             <textarea maxLength="800" className="addFamily-post" value={addComment} onChange={handleAddComment}/>
           </label>
             <br />
-          <input className="button" type="submit" value="Submit Family Member" />
+          <input className="button" type="submit" value="Submit Co-Worker" />
         </form>
       </div>
     </div>
@@ -160,7 +166,7 @@ export default function AddCoWorker(props) {
   return (
     <div>
       <button className="button" type="button" onClick={handleOpen}>
-        Add Co-Worker
+        Add Worker
       </button>
       <Modal
         open={open}

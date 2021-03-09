@@ -28,13 +28,17 @@ html {
 
 .flex-container-family {
   display: block;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-wrap: break-word;
   height: 50%;
   margin-bottom: 5px;
   margin-top: 20px;
+  background-color: white;
   border: solid #63F2E4;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  font-weight: bold;
+  font-size: large;
 }
 
 .addFamily-form {
@@ -47,8 +51,8 @@ html {
 
 .addFamily-post {
   resize: none;
-  width: 50vh;
-  height: 40vh;
+  width: 40vh;
+  height: 20vh;
   border: solid #63F2E4;
   border-radius: 15px;
   padding-left: 4px;
@@ -57,7 +61,7 @@ html {
   padding-bottom: 10px;
   font-family: 'Montserrat, sans-serif';
   font-style: normal;
-  font-weight: 400;;
+  font-weight:600;
   outline: none;
   position: relative;
   margin-left: 10%
@@ -85,7 +89,6 @@ html {
   display: flex;
   flex-direction: row;
   position: absolute;
-  margin-left: 45%;
   width: 100vh;
 }
 
@@ -123,4 +126,8 @@ html {
 }
 .button:focus {
   outline: none;
+}
+
+.thick {
+  font-weight: bold;
 }
