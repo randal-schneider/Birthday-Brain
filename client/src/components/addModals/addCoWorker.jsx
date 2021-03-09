@@ -151,7 +151,7 @@ export default function AddCoWorker(props) {
             <textarea maxLength="800" className="addFamily-post" value={addComment} onChange={handleAddComment}/>
           </label>
             <br />
-          <input className="button" type="submit" value="Submit Family Member" />
+          <input className="button" type="submit" value="Submit Co-Worker" />
         </form>
       </div>
     </div>
@@ -160,7 +160,7 @@ export default function AddCoWorker(props) {
   return (
     <div>
       <button className="button" type="button" onClick={handleOpen}>
-        Add Co-Worker
+        Add Worker
       </button>
       <Modal
         open={open}
