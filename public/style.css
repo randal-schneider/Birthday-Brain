@@ -127,3 +127,7 @@ html {
 .button:focus {
   outline: none;
 }
+
+.thick {
+  font-weight: bold;
+}

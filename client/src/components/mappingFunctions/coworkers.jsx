@@ -10,10 +10,10 @@ const Coworkers = (props) => {
           <p>Name: {coworker.name}</p>
           <p>Birthday: {moment.utc(coworker.bday).format("MMM Do YY")}</p>
           <p>Gender: {coworker.gender}</p>
+          <p>Date Given: {coworker.dateGiv === "" ? coworker.dateGiv : moment.utc(coworker.dateGiv).format("MMM Do YY")}</p>
           <p>Link for Gift Given: <a href={coworker.giftGiv} target="_blank">{coworker.giftGiv}</a></p>
+          <p>Date Received: {coworker.dateRec === "" ? coworker.dateRec : moment.utc(coworker.dateRec).format("MMM Do YY")}</p>
           <p>Link for Gift I Received: <a href={coworker.giftRec} target="_blank">{coworker.giftRec}</a></p>
-          <p>Date Given: {moment.utc(coworker.dateGiv).format("MMM Do YY")}</p>
-          <p>Date Received: {moment.utc(coworker.dateRec).format("MMM Do YY")}</p>
           <p>Comment: {coworker.comment}</p>
           <br></br>
           <br></br>

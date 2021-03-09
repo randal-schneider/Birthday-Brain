@@ -117,40 +117,40 @@ export default function AddFriend(props) {
     <div style={modalStyle} className={classes.paper}>
       <div>
         <form className="addFamily-form" onSubmit={handleAddFriend}>
-          <label>
+          <label className="thick">
             Name:{' '}{' '}
             <input className="name-box" type="text" value={member} onChange={handleName} required />
           </label>
           <br />
-          <label>
+          <label className="thick">
             Gender:{' '}{' '}
             <input className="name-box" type="text" value={gend} onChange={handleGender} required />{' '}{' '}
           </label>
           <br />
-          <label>
+          <label className="thick">
             Birthday:{' '}{' '}
-          <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={date} onChange={handleBday}/>
+          <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={date} onChange={handleBday} required/>
           </label>
           <br />
-          <label>
+          <label className="thick">
             Date Given:{' '}{' '}
             <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={givenDate} onChange={handleGivDate}/>
           </label>
           <br />
-          <label>
+          <label className="thick">
             Link for Gift Given:{' '}{' '}<input className="name-box" type="text" value={giftGive} onChange={handleGiftGiven}/>
           </label>
           <br />
-          <label>
+          <label className="thick">
             Date Received:{' '}{' '}
             <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={receiveDate} onChange={handleRecDate}/>{' '}{' '}
           </label>
           <br />
-          <label>
+          <label className="thick">
             Link for Gift I Received:{' '}{' '}<input className="name-box" type="text" value={giftReceived} onChange={handleGiftReceived}/>
           </label>
           <br />
-          <label>
+          <label className="thick">
             Comment:{' '}{' '}
             <br />
             <br />
