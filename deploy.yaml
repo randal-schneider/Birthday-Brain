@@ -15,18 +15,18 @@ spec:
     spec:
       containers:
       - name: k8-deploy-site
-        image: ranschneider/k8deploy:v1
+        image: ranschneider/k8deploybday:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: k8deploy-entrypoint
+  name: k8deploybday-entrypoint
   namespace: default
 spec:
   type: NodePort
   selector:
     bb: web
   ports:
-  - port: 3003
-    targetPort: 3003
+  - port: 3000
+    targetPort: 3000
     nodePort: 30001
