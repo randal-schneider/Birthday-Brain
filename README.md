@@ -30,7 +30,7 @@ The Birthday Brain makes no claims that your gift will be liked, but it definite
 
 <br>
 
-Behold the Glory of Birthday Brain
+## Behold the Glory of Birthday Brain ##
 (results may vary, product is currently in early release, and being updated frequently)
 
 <br>
