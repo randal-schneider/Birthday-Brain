@@ -27,3 +27,14 @@ Now A Quote From one of Our Wonderful Customers:
 
 ## Closing and Call to Action ##
 The Birthday Brain makes no claims that your gift will be liked, but it definitely wont be a gift you have given them before!!! Get the Birthday Brain Today and starting adding to it today!! You wont regret it!
+
+<br>
+
+## Behold the Glory of Birthday Brain ##
+(results may vary, product is currently in early release, and being updated frequently)
+
+<br>
+
+<image src="./public/smartmockups_kml4al9b.jpg">
+
+<br>
