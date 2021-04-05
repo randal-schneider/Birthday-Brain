@@ -43,8 +43,8 @@ export default function AddFamily(props) {
   const [givDate, setGivDate] = React.useState('');
   const [recDate, setRecDate] = React.useState('');
   const [relation, setRelation] = React.useState('');
-  const [giftGive, setGiftGive] = React.useState('none');
-  const [giftReceived, setGiftReceived] = React.useState('none');
+  const [giftGive, setGiftGive] = React.useState('');
+  const [giftReceived, setGiftReceived] = React.useState('');
   const [addComment, setComment] = React.useState('');
 
 
@@ -108,8 +108,8 @@ export default function AddFamily(props) {
     setGivDate('');
     setRecDate('');
     setRelation('');
-    setGiftGive('none');
-    setGiftReceived('none');
+    setGiftGive('');
+    setGiftReceived('');
     setComment('');
   };
 

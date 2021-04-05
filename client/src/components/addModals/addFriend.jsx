@@ -43,8 +43,8 @@ export default function AddFriend(props) {
   const [givDate, setGivDate] = React.useState('');
   const [recDate, setRecDate] = React.useState('');
   const [gend, setGender] = React.useState('');
-  const [giftGive, setGiftGive] = React.useState('none');
-  const [giftReceived, setGiftReceived] = React.useState('none');
+  const [giftGive, setGiftGive] = React.useState('');
+  const [giftReceived, setGiftReceived] = React.useState('');
   const [addComment, setComment] = React.useState('');
 
 
@@ -108,8 +108,8 @@ export default function AddFriend(props) {
     setGivDate('');
     setRecDate('');
     setGender('');
-    setGiftGive('none');
-    setGiftReceived('none');
+    setGiftGive('');
+    setGiftReceived('');
     setComment('');
   };
 
