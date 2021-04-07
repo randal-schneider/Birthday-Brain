@@ -34,6 +34,8 @@ export default function CoworkersModal(props) {
   const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
+  const [filter, setFilter] = React.useState('');
+  const [coworkersArray, setCoworkers] = React.useState([]);
 
   const handleOpen = () => {
     setOpen(true);
@@ -43,13 +45,38 @@ export default function CoworkersModal(props) {
     setOpen(false);
   };
 
+  const handleFilter = (event) => {
+    setFilter(event.target.value);
+  }
+
+  const handleSubmit = () => {
+    console.log(filter);
+    if (filter.length === 0) {
+      return;
+    } else {
+      setCoworkers(props.coworkers.filter(worker => {
+        if (worker.name.toLowerCase().includes(filter.toLowerCase())) {
+          console.log(worker);
+          return worker;
+        }
+      }));
+    }
+  }
+
   const body = (
     <div style={modalStyle} className={classes.paper}>
       <div className="famModalHeader">
         THE WORKERS!!
       </div>
+      <div>
+        <label className="thick">
+          Search:{' '}{' '}
+          <input className="name-box" type="text" value={filter} onChange={handleFilter} />{' '}{' '}
+        </label>
+        <input className="button" type="button" onClick={handleSubmit} value="Search For Worker" />
+      </div>
       <div className="flex-container-family">
-        <Coworkers coworkers={props.coworkers} />
+        <Coworkers coworkers={coworkersArray.length === 0 ? props.coworkers : coworkersArray}/>
       </div>
       <button className="button" type="button" onClick={handleClose}>
         Stop Looking at The Workers
