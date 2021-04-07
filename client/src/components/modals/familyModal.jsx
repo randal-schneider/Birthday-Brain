@@ -34,6 +34,8 @@ export default function FamilyModal(props) {
   const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
+  const [filter, setFilter] = React.useState('');
+  const [familyArray, setFamily] = React.useState([]);
 
   const handleOpen = () => {
     setOpen(true);
@@ -43,13 +45,38 @@ export default function FamilyModal(props) {
     setOpen(false);
   };
 
+  const handleFilter = (event) => {
+    setFilter(event.target.value);
+  }
+
+  const handleSubmit = () => {
+    console.log(filter);
+    if (filter.length === 0) {
+      return;
+    } else {
+      setFamily(props.family.filter(member => {
+        if (member.name.toLowerCase().includes(filter.toLowerCase())) {
+          console.log(member);
+          return member;
+        }
+      }));
+    }
+  }
+
   const body = (
     <div style={modalStyle} className={classes.paper}>
       <div className="famModalHeader">
         THE Family!!
       </div>
+      <div>
+        <label className="thick">
+          Search:{' '}{' '}
+          <input className="name-box" type="text" value={filter} onChange={handleFilter} />{' '}{' '}
+        </label>
+        <input className="button" type="button" onClick={handleSubmit} value="Search For Family" />
+      </div>
       <div className="flex-container-family">
-        <Family family={props.family} />
+        <Family family={familyArray.length === 0 ? props.family : familyArray}/>
       </div>
       <button className="button" type="button" onClick={handleClose}>
         Stop Looking at The Family
