@@ -2,7 +2,7 @@ import React from 'react';
 const moment = require('moment');
 
 const Friends = (props) => {
-
+  // console.log(props.friends);
   return (
     <div>
       {props.friends.map((friend) => (
