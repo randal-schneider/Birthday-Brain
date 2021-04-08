@@ -70,10 +70,9 @@ export default function FriendsModal(props) {
       </div>
       <div>
         <label className="thick">
-          Search:{' '}{' '}
-          <input className="name-box" type="text" value={filter} onChange={handleFilter} />{' '}{' '}
-        </label>
-        <input className="button" type="button" onClick={handleSubmit} value="Search For Friend" />
+          <input className="button" type="button" onClick={handleSubmit} value="Search By Name"/>{' '}{' '}
+          <input className="search-box" type="text" value={filter} onChange={handleFilter} />
+          </label>
       </div>
       <div className="flex-container-family">
         <Friends friends={friendArray.length === 0 ? props.friends : friendArray}/>

@@ -118,36 +118,52 @@ export default function AddFriend(props) {
       <div>
         <form className="addFamily-form" onSubmit={handleAddFriend}>
           <label className="thick">
-            Name:{' '}{' '}
             <input className="name-box" type="text" value={member} onChange={handleName} required />
+            <div style={{float: "right"}}>
+              Name:{' '}{' '}
+            </div>
           </label>
           <br />
           <label className="thick">
-            Gender:{' '}{' '}
-            <input className="name-box" type="text" value={gend} onChange={handleGender} required />{' '}{' '}
+            <input className="name-box" type="text" value={gend} onChange={handleGender} required />
+            <div style={{float: "right"}}>
+              Gender:{' '}{' '}
+            </div>
           </label>
           <br />
           <label className="thick">
-            Birthday:{' '}{' '}
-          <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={date} onChange={handleBday} required/>
+            <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={date} onChange={handleBday} required/>
+            <div style={{float: "right"}}>
+              Birthdate:{' '}{' '}
+            </div>
           </label>
           <br />
           <label className="thick">
-            Date Given:{' '}{' '}
             <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={givenDate} onChange={handleGivDate}/>
+            <div style={{float: "right"}}>
+              Date Given:{' '}{' '}
+            </div>
           </label>
           <br />
           <label className="thick">
-            Link for Gift Given:{' '}{' '}<input className="name-box" type="text" value={giftGive} onChange={handleGiftGiven}/>
+            <input className="name-box" type="text" value={giftGive} onChange={handleGiftGiven}/>
+            <div style={{float: "right"}}>
+              Link for Gift Given:{' '}{' '}
+            </div>
           </label>
           <br />
           <label className="thick">
-            Date Received:{' '}{' '}
-            <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={receiveDate} onChange={handleRecDate}/>{' '}{' '}
+            <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={receiveDate} onChange={handleRecDate}/>
+            <div style={{float: "right"}}>
+              Date Received:{' '}{' '}
+            </div>
           </label>
           <br />
           <label className="thick">
-            Link for Gift I Received:{' '}{' '}<input className="name-box" type="text" value={giftReceived} onChange={handleGiftReceived}/>
+            <input className="name-box" type="text" value={giftReceived} onChange={handleGiftReceived}/>
+            <div style={{float: "right"}}>
+              Link for Gift Received:{' '}{' '}
+            </div>
           </label>
           <br />
           <label className="thick">
