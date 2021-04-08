@@ -70,10 +70,9 @@ export default function FamilyModal(props) {
       </div>
       <div>
         <label className="thick">
-          Search:{' '}{' '}
-          <input className="name-box" type="text" value={filter} onChange={handleFilter} />{' '}{' '}
-        </label>
-        <input className="button" type="button" onClick={handleSubmit} value="Search For Family" />
+          <input className="button" type="button" onClick={handleSubmit} value="Search By Name"/>{' '}{' '}
+          <input className="search-box" type="text" value={filter} onChange={handleFilter} />
+          </label>
       </div>
       <div className="flex-container-family">
         <Family family={familyArray.length === 0 ? props.family : familyArray}/>

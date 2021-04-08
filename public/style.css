@@ -68,7 +68,8 @@ html {
 }
 
 .date-box {
-  max-width: 150px;
+  float: right;
+  width: 160px;
   border-radius: 4px;
   font-family: 'Montserrat, sans-serif';
   font-style: normal;
@@ -77,6 +78,7 @@ html {
 }
 
 .name-box {
+  float: right;
   border-radius: 4px;
   font-family: 'Montserrat, sans-serif';
   font-style: normal;
@@ -84,6 +86,13 @@ html {
   border: solid #63F2E4;
 }
 
+.search-box {
+  border-radius: 4px;
+  font-family: 'Montserrat, sans-serif';
+  font-style: normal;
+  font-weight: bold;
+  border: solid #63F2E4;
+}
 /* Properties for each button and attempt at centering those buttons*/
 .mainButtonContainer {
   display: flex;
