@@ -39,10 +39,12 @@ export default function FriendsModal(props) {
 
   const handleOpen = () => {
     setOpen(true);
+    setFriends(props.friends)
   };
 
   const handleClose = () => {
     setOpen(false);
+    setFilter('');
   };
 
   const handleFilter = (event) => {
