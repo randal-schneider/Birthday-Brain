@@ -39,10 +39,14 @@ export default function CoworkersModal(props) {
 
   const handleOpen = () => {
     setOpen(true);
+    if (filter.length === 0) {
+      setCoworkers(props.coworkers)
+    }
   };
 
   const handleClose = () => {
     setOpen(false);
+    setFilter('');
   };
 
   const handleFilter = (event) => {

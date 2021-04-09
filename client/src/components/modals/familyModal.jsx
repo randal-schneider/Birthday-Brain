@@ -39,10 +39,12 @@ export default function FamilyModal(props) {
 
   const handleOpen = () => {
     setOpen(true);
+    setFamily(props.family);
   };
 
   const handleClose = () => {
     setOpen(false);
+    setFilter('');
   };
 
   const handleFilter = (event) => {
