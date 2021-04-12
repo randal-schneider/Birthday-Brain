@@ -17,6 +17,7 @@ const Coworkers = (props) => {
           <p>Comment: {coworker.comment}</p>
           <br></br>
           <br></br>
+          <hr style={{background: "black", height: "5px"}}></hr>
         </ul>
       ))}
     </div>

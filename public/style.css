@@ -50,6 +50,7 @@ html {
 }
 
 .addFamily-post {
+  flex-flow: wrap;
   resize: none;
   width: 40vh;
   height: 20vh;
@@ -67,6 +68,24 @@ html {
   margin-left: 10%
 }
 
+.picandinputbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.inputcontainer {
+  flex-flow: column;
+}
+
+.piccontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+}
+
+
 .date-box {
   float: right;
   width: 160px;
@@ -79,6 +98,7 @@ html {
 
 .name-box {
   float: right;
+  width: 160px;
   border-radius: 4px;
   font-family: 'Montserrat, sans-serif';
   font-style: normal;
@@ -139,4 +159,10 @@ html {
 
 .thick {
   font-weight: bold;
+}
+
+
+img {
+  max-width: 70%;
+  height: 70%;
 }
