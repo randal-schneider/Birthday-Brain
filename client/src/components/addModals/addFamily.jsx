@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2, 4, 3),
     borderRadius: '15px',
     outline: 'none',
+    overflow: 'auto'
   },
 }));
 
@@ -117,55 +118,61 @@ export default function AddFamily(props) {
     <div style={modalStyle} className={classes.paper}>
       <div>
         <form className="addFamily-form" onSubmit={handleAddFamily}>
-          <label className="thick">
-            <input className="name-box" type="text" value={member} onChange={handleName} required/>
-            <div style={{float: "right"}}>
-              Name:{' '}{' '}
+          <div className="picandinputbox">
+            <div className="piccontainer">
+                <img src="/images/family.jpg"></img>
             </div>
-          </label>
-          <br />
-          <label className="thick">
-            <input className="name-box" type="text" value={relation} onChange={handleRelation} required />
-            <div style={{float: "right"}}>
-              Relation:{' '}{' '}
+            <div className="inputcontainer">
+              <label className="thick">
+                <input className="name-box" type="text" value={member} onChange={handleName} required/>
+                <div style={{float: "right"}}>
+                  Name:{' '}{' '}
+                </div>
+              </label>
+              <br />
+              <label className="thick">
+                <input className="name-box" type="text" value={relation} onChange={handleRelation} required />
+                <div style={{float: "right"}}>
+                  Relation:{' '}{' '}
+                </div>
+              </label>
+              <br />
+              <label className="thick">
+                <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={date} onChange={handleBday} required/>
+                <div style={{float: "right"}}>
+                  Birthdate:{' '}{' '}
+                </div>
+              </label>
+              <br />
+              <label className="thick">
+                <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={givenDate} onChange={handleGivDate}/>
+                <div style={{float: "right"}}>
+                  Date Given:{' '}{' '}
+                </div>
+              </label>
+              <br />
+              <label className="thick">
+                <input className="name-box" type="text" value={giftGive} onChange={handleGiftGiven}/>
+                <div style={{float: "right"}}>
+                  Gift Link:{' '}{' '}
+                </div>
+              </label>
+              <br />
+              <label className="thick">
+                <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={receiveDate} onChange={handleRecDate}/>
+                <div style={{float: "right"}}>
+                  Date Received:{' '}{' '}
+                </div>
+              </label>
+              <br />
+              <label className="thick">
+                <input className="name-box" type="text" value={giftReceived} onChange={handleGiftReceived}/>
+                <div style={{float: "right"}}>
+                  Gift Link:{' '}{' '}
+                </div>
+              </label>
             </div>
-          </label>
-          <br />
-          <label className="thick">
-            <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={date} onChange={handleBday} required/>
-            <div style={{float: "right"}}>
-              Birthdate:{' '}{' '}
-            </div>
-          </label>
-          <br />
-          <label className="thick">
-            <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={givenDate} onChange={handleGivDate}/>
-            <div style={{float: "right"}}>
-              Date Given:{' '}{' '}
-            </div>
-          </label>
-          <br />
-          <label className="thick">
-            <input className="name-box" type="text" value={giftGive} onChange={handleGiftGiven}/>
-            <div style={{float: "right"}}>
-              Link for Gift Given:{' '}{' '}
-            </div>
-          </label>
-          <br />
-          <label className="thick">
-            <input className="date-box" id="dateRequired" type="date" name="dateRequired" defaultValue={receiveDate} onChange={handleRecDate}/>
-            <div style={{float: "right"}}>
-              Date Received:{' '}{' '}
-            </div>
-          </label>
-          <br />
-          <label className="thick">
-            <input className="name-box" type="text" value={giftReceived} onChange={handleGiftReceived}/>
-            <div style={{float: "right"}}>
-              Link for Gift Received:{' '}{' '}
-            </div>
-          </label>
-          <br />
+          </div>
           <label className="thick">
             Comment:{' '}{' '}
             <br />
