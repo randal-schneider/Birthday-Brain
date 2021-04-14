@@ -14,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
+
 app.get('/family', (req, res) => {
   Family.find({}, (err, result) => {
     if(err) res.status(400).send();
