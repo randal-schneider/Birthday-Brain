@@ -18,7 +18,9 @@ class App extends React.Component {
       coworkers: []
     };
 
-    this.getFamily = this.getFamily.bind(this);
+    this.postFamily = this.postFamily.bind(this);
+    this.postFriend = this.postFriend.bind(this);
+    this.postCoWorker = this.postCoWorker.bind(this);
   }
 
   componentDidMount() {
@@ -101,13 +103,13 @@ class App extends React.Component {
           </div>
           <div className="buttonContainer">
             <div>
-              <AddFamily newFamily={this.postFamily.bind(this)}/>
+              <AddFamily newFamily={this.postFamily}/>
             </div>
             <div>
-              <AddFriend newFriend={this.postFriend.bind(this)}/>
+              <AddFriend newFriend={this.postFriend}/>
             </div>
             <div>
-              <AddCoWorker newCoWorker={this.postCoWorker.bind(this)}/>
+              <AddCoWorker newCoWorker={this.postCoWorker}/>
             </div>
           </div>
         </div>
