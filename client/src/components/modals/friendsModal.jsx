@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Friends from '../mappingFunctions/friends.jsx';
@@ -32,10 +33,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FriendsModal(props) {
   const classes = useStyles();
-  const [modalStyle] = React.useState(getModalStyle);
-  const [open, setOpen] = React.useState(false);
-  const [filter, setFilter] = React.useState('');
-  const [friendArray, setFriends] = React.useState([]);
+  const [modalStyle] = useState(getModalStyle);
+  const [open, setOpen] = useState(false);
+  const [filter, setFilter] = useState('');
+  const [friendArray, setFriends] = useState([]);
 
   const handleOpen = () => {
     setOpen(true);
