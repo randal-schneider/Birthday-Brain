@@ -14,6 +14,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
+app.get('/login', (req, res) => {
+  res.send({
+    token: 'test123'
+  });
+});
 
 app.get('/family', (req, res) => {
   Family.find({}, (err, result) => {

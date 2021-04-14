@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 
@@ -37,16 +38,16 @@ const receiveDate = someDate.toISOString().substr(0,10);
 
 export default function AddFriend(props) {
   const classes = useStyles();
-  const [modalStyle] = React.useState(getModalStyle);
-  const [open, setOpen] = React.useState(false);
-  const [member, setName] = React.useState('');
-  const [bdayDate, setBday] = React.useState(date);
-  const [givDate, setGivDate] = React.useState('');
-  const [recDate, setRecDate] = React.useState('');
-  const [gend, setGender] = React.useState('');
-  const [giftGive, setGiftGive] = React.useState('');
-  const [giftReceived, setGiftReceived] = React.useState('');
-  const [addComment, setComment] = React.useState('');
+  const [modalStyle] = useState(getModalStyle);
+  const [open, setOpen] = useState(false);
+  const [member, setName] = useState('');
+  const [bdayDate, setBday] = useState(date);
+  const [givDate, setGivDate] = useState('');
+  const [recDate, setRecDate] = useState('');
+  const [gend, setGender] = useState('');
+  const [giftGive, setGiftGive] = useState('');
+  const [giftReceived, setGiftReceived] = useState('');
+  const [addComment, setComment] = useState('');
 
 
   const handleName = (event) => {
