@@ -1,5 +1,8 @@
 html {
   background: url('https://media4.giphy.com/media/5jULgyuDJRnzcQw9uT/source.gif') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -166,3 +169,12 @@ img {
   max-width: 70%;
   height: 70%;
 }
+
+
+
+/*================================CSS FOR LOGIN==================================================*/
+
+.wrapper {
+    padding: 20px;
+}
+

@@ -27,8 +27,10 @@
     "jquery": "^3.4.1",
     "moment": "^2.29.1",
     "mongoose": "^5.11.11",
+    "passport-google-oauth": "^2.0.0",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "webpack": "^4.44.2",
