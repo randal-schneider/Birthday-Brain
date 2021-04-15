@@ -25,7 +25,7 @@ function App() {
       <h1>Birthday Brain !!!</h1>
       <Router>
         <Switch>
-          <Route path="/birthdaypage">
+          <Route path="/BirthdayBrain">
             <BirthdayPage />
           </Route>
         </Switch>

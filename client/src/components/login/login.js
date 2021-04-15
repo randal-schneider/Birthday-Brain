@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 
 async function loginUser(credentials) {
-  console.log(credentials);
   return axios.post('/login', credentials)
-    .then(data => data.json())
+    .then(data => data);
 }
 
 export default function Login({ setToken }) {
