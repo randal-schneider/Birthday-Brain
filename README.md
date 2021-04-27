@@ -38,3 +38,21 @@ The Birthday Brain makes no claims that your gift will be liked, but it definite
 <image src="./public/smartmockups_kml4al9b.jpg">
 
 <br>
+
+## Cloning/Modding Repo
+
+cd to the directory you desire to clone Birthday Brain into
+git clone repo
+```
+git clone https://github.com/randal-schneider/Birthday-Brain.git
+```
+Verify have Node Installed and have Mongodb up and running
+
+Initial Commands
+```
+cd BIRTHDAY-BRAIN
+npm i
+npm start
+```
+
+Next open window and go to http://localhost:3000/#/BirthdayBrain
